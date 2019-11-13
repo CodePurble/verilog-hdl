@@ -1,5 +1,5 @@
 $date
-	Wed Nov 13 21:33:23 2019
+	Wed Nov 13 22:25:41 2019
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module mux_testbench $end
+$scope module fourToOneMux_testbench $end
 $var wire 1 ! y $end
 $var reg 1 " a $end
 $var reg 1 # b $end

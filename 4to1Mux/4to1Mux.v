@@ -1,21 +1,21 @@
-module myMux(a, b, c, d, s0, s1, y);
+module fourToOneMux(a, b, c, d, s0, s1, y);
     input a, b, c, d, s0, s1;
     output y;
 
-    assign y = ((~s1 & ~s0 & a) | (~s1 & s0 & b) | (s1 & ~s0 & c) | (s1 & s0 & d));
+    assign y = (~s1 & ~s0 & a) | (~s1 & s0 & b) | (s1 & ~s0 & c) | (s1 & s0 & d);
 endmodule
 
-module mux_testbench;
+module fourToOneMux_testbench;
     reg a, b, c, d, s0, s1;
     wire y;
 
-    myMux object(a, b, c, d, s0, s1, y);
+    fourToOneMux object(a, b, c, d, s0, s1, y);
 
     initial
     begin
         $monitor("a = %b, b = %b, c = %b, d = %b\ns1 = %b, s0 = %b\ny = %b\n\n", a, b, c, d, s1, s0, y);
-        $dumpfile("mux.vcd");
-        $dumpvars(0, mux_testbench);
+        $dumpfile("fourToOneMux.vcd");
+        $dumpvars(0, fourToOneMux_testbench);
 
         assign a = 0;
         assign b = 1;
