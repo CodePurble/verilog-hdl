@@ -1,10 +1,15 @@
-`include "mux.v"
+module myMux(a, b, c, d, s0, s1, y);
+    input a, b, c, d, s0, s1;
+    output y;
+
+    assign y = ((~s1 & ~s0 & a) | (~s1 & s0 & b) | (s1 & ~s0 & c) | (s1 & s0 & d));
+endmodule
 
 module mux_testbench;
-    reg a, b, c, d, s0, s1, s2;
+    reg a, b, c, d, s0, s1;
     wire y;
 
-
+    myMux object(a, b, c, d, s0, s1, y);
 
     initial
     begin
