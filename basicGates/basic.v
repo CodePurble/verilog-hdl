@@ -19,7 +19,6 @@ module basic_testbench;
 
     initial
     begin
-        // $monitor("a1 = %b, a2 = %b", a1, a2);
         $monitor("a1 = %b, a2 = %b\ny1 = %b, y2 = %b, y3 = %b, y4 = %b, y5 = %b, y6 = %b, y7 = %b\n", a1, a2, y1, y2, y3, y4, y5, y6, y7);
         $dumpfile("basic.vcd");
         $dumpvars(0, basic_testbench);
