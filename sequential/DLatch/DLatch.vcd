@@ -1,0 +1,36 @@
+$date
+	Fri Nov 15 13:08:38 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module DLatch_tb $end
+$var wire 1 ! Q $end
+$var reg 1 " D $end
+$var reg 1 # en $end
+$scope module uut $end
+$var wire 1 " D $end
+$var wire 1 # en $end
+$var wire 1 ! Q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1#
+0"
+0!
+$end
+#100
+0#
+1"
+#200
+1!
+1#
+#300
+0!
+0"
+#400

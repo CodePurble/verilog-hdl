@@ -1,3 +1,5 @@
+`timescale 10ns / 1ns
+
 module fourToOneMux(a, b, c, d, s0, s1, y);
     input a, b, c, d, s0, s1;
     output y;

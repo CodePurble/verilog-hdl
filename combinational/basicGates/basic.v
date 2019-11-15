@@ -1,3 +1,5 @@
+`timescale 10ns / 1ns
+
 module basic(a1, a2, y1, y2, y3, y4, y5, y6, y7);
     input a1, a2;
     output y1, y2, y3, y4, y5, y6, y7;

@@ -1,12 +1,21 @@
+`timescale 10ns / 1ns
+
 module bcdToGray(
     input [3:0] b,
     output [3:0] g
     );
 
     assign g[3] = b[3];
-    assign g[2] = b[3] ^ b[2];
-    assign g[1] = b[2] ^ b[1];
-    assign g[0] = b[1] ^ b[0];
+    // Data flow
+    // assign g[2] = b[3] ^ b[2];
+    // assign g[1] = b[2] ^ b[1];
+    // assign g[0] = b[1] ^ b[0];
+
+    // gate level (intermediate outputs, if any, must be declared as wires)
+    xor(g[2], b[3], b[2]);
+    xor(g[1], b[2] ^ b[1]);
+    xor(g[0], b[1], b[0]);
+
 endmodule
 
 module bcdToGray_tb;

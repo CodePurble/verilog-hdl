@@ -1,0 +1,55 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)" "(v10_3)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x5579ae2b5850 .scope module, "DLatch_tb" "DLatch_tb" 2 13;
+ .timescale -8 -9;
+v0x5579ae2c6710_0 .var "D", 0 0;
+v0x5579ae2c67b0_0 .net "Q", 0 0, L_0x5579ae2c6980;  1 drivers
+v0x5579ae2c6880_0 .var "en", 0 0;
+S_0x5579ae2b59d0 .scope module, "uut" "DLatch" 2 18, 2 3 0, S_0x5579ae2b5850;
+ .timescale -8 -9;
+    .port_info 0 /INPUT 1 "D"
+    .port_info 1 /INPUT 1 "en"
+    .port_info 2 /OUTPUT 1 "Q"
+v0x5579ae2800a0_0 .net "D", 0 0, v0x5579ae2c6710_0;  1 drivers
+v0x5579ae2c6530_0 .net "Q", 0 0, L_0x5579ae2c6980;  alias, 1 drivers
+v0x5579ae2c65f0_0 .net "en", 0 0, v0x5579ae2c6880_0;  1 drivers
+L_0x5579ae2c6980 .functor MUXZ 1, L_0x5579ae2c6980, v0x5579ae2c6710_0, v0x5579ae2c6880_0, C4<>;
+    .scope S_0x5579ae2b5850;
+T_0 ;
+    %vpi_call 2 22 "$monitor", "en = %b, D = %b, Q = %b", v0x5579ae2c6880_0, v0x5579ae2c6710_0, v0x5579ae2c67b0_0 {0 0 0};
+    %vpi_call 2 23 "$dumpfile", "DLatch.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5579ae2b5850 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x5579ae2c6710_0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x5579ae2c6880_0;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x5579ae2c6710_0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x5579ae2c6880_0;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x5579ae2c6710_0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x5579ae2c6880_0;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %cassign/vec4 v0x5579ae2c6710_0;
+    %pushi/vec4 1, 0, 1;
+    %cassign/vec4 v0x5579ae2c6880_0;
+    %delay 100, 0;
+    %vpi_call 2 41 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "DLatch.v";
