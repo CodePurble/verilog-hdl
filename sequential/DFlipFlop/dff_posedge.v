@@ -4,6 +4,12 @@ module Dff_posedge(D, clk, q, qbar);
     input D, clk;
     output reg q, qbar;
 
+    initial
+    begin
+        q = 0;
+        qbar = 1;
+    end
+
     always @(posedge clk)
 	begin
         q = D;

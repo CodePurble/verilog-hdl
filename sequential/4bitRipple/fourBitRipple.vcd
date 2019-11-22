@@ -1,0 +1,305 @@
+$date
+	Fri Nov 22 01:36:06 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ns
+$end
+$scope module fourBitRipple_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 1 " clk $end
+$scope module uut $end
+$var wire 1 " clock $end
+$var wire 1 # qb3 $end
+$var wire 1 $ qb2 $end
+$var wire 1 % qb1 $end
+$var wire 1 & qb0 $end
+$var wire 1 ' q3 $end
+$var wire 1 ( q2 $end
+$var wire 1 ) q1 $end
+$var wire 1 * q0 $end
+$var wire 4 + count [3:0] $end
+$scope module d0 $end
+$var wire 1 ) clk $end
+$var wire 1 & D $end
+$var reg 1 * q $end
+$var reg 1 & qbar $end
+$upscope $end
+$scope module d1 $end
+$var wire 1 ( clk $end
+$var wire 1 % D $end
+$var reg 1 ) q $end
+$var reg 1 % qbar $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 ' clk $end
+$var wire 1 $ D $end
+$var reg 1 ( q $end
+$var reg 1 $ qbar $end
+$upscope $end
+$scope module d3 $end
+$var wire 1 " clk $end
+$var wire 1 # D $end
+$var reg 1 ' q $end
+$var reg 1 # qbar $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 +
+1*
+1)
+1(
+1'
+0&
+0%
+0$
+0#
+0"
+b0 !
+$end
+#10
+b1 !
+b1 +
+1#
+0'
+1"
+#20
+0"
+#30
+1$
+0(
+b10 !
+b10 +
+0#
+1'
+1"
+#40
+0"
+#50
+b11 !
+b11 +
+1#
+0'
+1"
+#60
+0"
+#70
+1%
+0)
+0$
+1(
+b100 !
+b100 +
+0#
+1'
+1"
+#80
+0"
+#90
+b101 !
+b101 +
+1#
+0'
+1"
+#100
+0"
+#110
+1$
+0(
+b110 !
+b110 +
+0#
+1'
+1"
+#120
+0"
+#130
+b111 !
+b111 +
+1#
+0'
+1"
+#140
+0"
+#150
+1&
+0*
+0%
+1)
+0$
+1(
+b1000 !
+b1000 +
+0#
+1'
+1"
+#160
+0"
+#170
+b1001 !
+b1001 +
+1#
+0'
+1"
+#180
+0"
+#190
+1$
+0(
+b1010 !
+b1010 +
+0#
+1'
+1"
+#200
+0"
+#210
+b1011 !
+b1011 +
+1#
+0'
+1"
+#220
+0"
+#230
+1%
+0)
+0$
+1(
+b1100 !
+b1100 +
+0#
+1'
+1"
+#240
+0"
+#250
+b1101 !
+b1101 +
+1#
+0'
+1"
+#260
+0"
+#270
+1$
+0(
+b1110 !
+b1110 +
+0#
+1'
+1"
+#280
+0"
+#290
+b1111 !
+b1111 +
+1#
+0'
+1"
+#300
+0"
+#310
+0&
+1*
+0%
+1)
+0$
+1(
+b0 !
+b0 +
+0#
+1'
+1"
+#320
+0"
+#330
+b1 !
+b1 +
+1#
+0'
+1"
+#340
+0"
+#350
+1$
+0(
+b10 !
+b10 +
+0#
+1'
+1"
+#360
+0"
+#370
+b11 !
+b11 +
+1#
+0'
+1"
+#380
+0"
+#390
+1%
+0)
+0$
+1(
+b100 !
+b100 +
+0#
+1'
+1"
+#400
+0"
+#410
+b101 !
+b101 +
+1#
+0'
+1"
+#420
+0"
+#430
+1$
+0(
+b110 !
+b110 +
+0#
+1'
+1"
+#440
+0"
+#450
+b111 !
+b111 +
+1#
+0'
+1"
+#460
+0"
+#470
+1&
+0*
+0%
+1)
+0$
+1(
+b1000 !
+b1000 +
+0#
+1'
+1"
+#480
+0"
+#490
+b1001 !
+b1001 +
+1#
+0'
+1"
+#500

@@ -1,11 +1,11 @@
 $date
-	Wed Nov 13 22:25:41 2019
+	Fri Nov 15 19:04:03 2019
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	1s
+	1ns
 $end
 $scope module fourToOneMux_testbench $end
 $var wire 1 ! y $end
@@ -36,14 +36,14 @@ $dumpvars
 0"
 0!
 $end
-#20
+#200
 1!
 1&
-#40
+#400
 0!
 0&
 1'
-#60
+#600
 1!
 1&
-#80
+#800

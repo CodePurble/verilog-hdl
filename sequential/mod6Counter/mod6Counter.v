@@ -1,50 +1,52 @@
-`timescale 10ns / 10ns
+`timescale 10ns / 1ns
 
-module dff_posedge(d, clk, q, qbar);
-    input d, clk;
-    output reg q, qbar;
+module mod6Counter(
+    input clk,
+    output reg [3:1] qOut
+);
+    reg d3, d2, d1;
+
+    initial
+    begin
+       qOut = 0;
+       d3 = 0;
+       d2 = 0;
+       d1 = 0;
+    end
 
     always @(posedge clk)
-    begin
-        q = d;
-        qbar = ~d;
-    end
+        begin
+            qOut[3] = d3;
+            qOut[2] = d2;
+            qOut[1] = d1;
+
+            d3 = (qOut[3] & ~qOut[2]) | (~qOut[3] & qOut[2] & qOut[1]);
+            d2 = (qOut[1] & ~qOut[2]) | (~qOut[3] & qOut[2] & ~qOut[1]);
+            d1 = ~qOut[1] & (~qOut[2] | ~qOut[3]);
+        end
 endmodule
 
-module mod6Counter();
-    reg [3:1] dIn;
-    reg clock;
-    wire [3:1] qOut, qOutBar;
+module mod6Counter_tb;
 
-    dff_posedge d3(dIn[3], clock, qOut[3], qOutBar[3]);
-    dff_posedge d2(dIn[2], clock, qOut[2], qOutBar[2]);
-    dff_posedge d1(dIn[1], clock, qOut[1], qOutBar[1]);
+    // reg d3, d2, d1;
+    reg clk;
+    wire [3:1] q;
 
-    always(posedge clock)
-    begin
-        dIn[3] = (qOut[3] & qOutBar[2]) | (qOutBar[3] & qOut[2] & qOut[1]);
-        dIn[2] = (qOut[1] & qOutBar[2]) | (qOutBar[3] & qOut[2] & qOutBar[1]);
-        dIn[1] = qOutBar[1] & (qOutBar[2] | qOutBar[3]);
-    end
+    mod6Counter uut(.clk(clk), .qOut(q));
+
     initial
     begin
+        clk = 1;
         $dumpfile("mod6Counter.vcd");
-        $dumpvars(0, mod6Counter);
-    end
-    
+        $dumpvars(0, mod6Counter_tb);
+        $monitor("count = %b\n", q);
 
-    initial
-    begin
-        clock = 1'b0;
         repeat(50)
-            begin
-                clock = ~clock;
-                #10;
-            end
-    end
-
-    initial
-    begin
-        $monitor("dIn = %b, clock = %b, qOut = %b", dIn, clock, qOut);
+        begin
+            clk = ~clk;
+            #10;
+        end
     end
 endmodule
+
+
