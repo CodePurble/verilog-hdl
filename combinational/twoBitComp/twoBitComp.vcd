@@ -1,11 +1,11 @@
 $date
-	Thu Nov 14 18:58:28 2019
+	Fri Dec 13 00:53:34 2019
 $end
 $version
 	Icarus Verilog
 $end
 $timescale
-	1s
+	1ns
 $end
 $scope module twoBitComp_tb $end
 $var wire 1 ! less $end
@@ -32,16 +32,16 @@ b1 $
 0"
 1!
 $end
-#10
+#100
 1#
 0!
 b0 %
 b0 '
 b0 $
 b0 &
-#20
+#200
 0#
 1"
 b11 $
 b11 &
-#30
+#300
