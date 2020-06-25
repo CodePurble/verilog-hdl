@@ -25,21 +25,21 @@ module basic_testbench;
         $dumpfile("basic.vcd");
         $dumpvars(0, basic_testbench);
 
-	    assign a1 = 0;
-	    assign a2 = 0;
-	    #20;
+        assign a1 = 0;
+        assign a2 = 0;
+        #20;
 
-	    assign a1 = 0;
-	    assign a2 = 1;
-	    #20;
+        assign a1 = 0;
+        assign a2 = 1;
+        #20;
 
-	    assign a1 = 1;
-	    assign a2 = 0;
-	    #20;
+        assign a1 = 1;
+        assign a2 = 0;
+        #20;
 
-	    assign a1 = 1;
-	    assign a2 = 1;
-	    #20;
+        assign a1 = 1;
+        assign a2 = 1;
+        #20;
     end
 
 endmodule // basic_testbench
